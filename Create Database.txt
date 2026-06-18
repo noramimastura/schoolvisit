@@ -1,0 +1,31 @@
+-- Create Database
+CREATE DATABASE schoolvisit;
+
+-- Use Database
+USE schoolvisit;
+
+-- Create Club Registration Table
+CREATE TABLE club_registration (
+    registration_id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id VARCHAR(20) NOT NULL,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    form_level VARCHAR(10) NOT NULL,
+    club VARCHAR(50) NOT NULL,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO club_registration
+(student_id, fullname, email, phone, form_level, club)
+VALUES
+('F1001', 'Ali Ahmad', 'ali@gmail.com', '0123456789', 'Form 4', 'Robotics Club'),
+('F1002', 'Siti Aminah', 'siti@gmail.com', '0139876543', 'Form 3', 'Sports Club'),
+('F1003', 'Ahmad Razak', 'ahmad@gmail.com', '0145556677', 'Form 5', 'Photography Club');
+
+
+--Change the URL
+http://localhost:8080/SchoolVisit/
+
+RegisterPage.php
